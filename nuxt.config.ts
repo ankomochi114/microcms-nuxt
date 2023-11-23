@@ -5,7 +5,7 @@ export default defineNuxtConfig({
   ssr: true,
   devtools: { enabled: true },
   build: {
-    transpile: ["vuetify"],
+    transpile: [/vuetify/],
   },
   app: {
     baseURL: SITE_URL,
