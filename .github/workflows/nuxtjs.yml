@@ -71,7 +71,7 @@ jobs:
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
       - name: test
-        run: ls node_modules/vuetify/lib/components/VCode
+        run: ls /home/runner/work/microcms-nuxt/microcms-nuxt/node_modules/vuetify/lib/components/VCode
       - name: pwd
         run: pwd
       - name: Static HTML export with Nuxt
