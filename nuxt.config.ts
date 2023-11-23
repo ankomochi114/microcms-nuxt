@@ -1,9 +1,15 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+const SITE_URL = "/microcms-nuxt/";
+
 export default defineNuxtConfig({
   ssr: true,
   devtools: { enabled: true },
   build: {
     transpile: ["vuetify"],
+  },
+  app: {
+    baseURL: SITE_URL,
+    cdnURL: `https://isystk.github.io${SITE_URL}`,
   },
   typescript: {
     strict: true,
