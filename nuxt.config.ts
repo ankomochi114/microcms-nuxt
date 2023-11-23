@@ -7,11 +7,6 @@ export default defineNuxtConfig({
   build: {
     transpile: ["vuetify"],
   },
-  vite: {
-    ssr: {
-      noExternal: ["vuetify"],
-    },
-  },
   app: {
     baseURL: SITE_URL,
     cdnURL: `https://isystk.github.io${SITE_URL}`,
