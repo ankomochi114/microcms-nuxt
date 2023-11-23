@@ -59,9 +59,9 @@ jobs:
           #
           # You may remove this line if you want to manage the configuration yourself.
           static_site_generator: nuxt
-      - name: Restore cache
-        uses: actions/cache@v3
-        with:
+      # - name: Restore cache
+      #   uses: actions/cache@v3
+      #   with:
           path: |
             dist
             .nuxt
@@ -70,12 +70,6 @@ jobs:
             ${{ runner.os }}-nuxt-build-
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
-      - name: test
-        run: ls /home/runner/work/microcms-nuxt/microcms-nuxt/node_modules/vuetify/lib/components/VCode
-      - name: pwd
-        run: pwd
-      - name: cat
-        run: cat /home/runner/work/microcms-nuxt/microcms-nuxt/node_modules/vuetify/lib/components/VCode/VCode.css
       - name: Static HTML export with Nuxt
         env:
           MICROCMS_SERVICE_DOMAIN: ${{ secrets.MICROCMS_SERVICE_DOMAIN }}
