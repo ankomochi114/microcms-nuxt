@@ -9,7 +9,7 @@ export default defineNuxtConfig({
   },
   vite: {
     ssr: {
-      noExternal: ["vuetify"],
+      noExternal: [/\.css$/, /^vuetify/],
     },
   },
   app: {
