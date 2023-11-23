@@ -74,6 +74,8 @@ jobs:
         run: ls /home/runner/work/microcms-nuxt/microcms-nuxt/node_modules/vuetify/lib/components/VCode
       - name: pwd
         run: pwd
+      - name: cat
+        run: cat /home/runner/work/microcms-nuxt/microcms-nuxt/node_modules/vuetify/lib/components/VCode/VCode.css
       - name: Static HTML export with Nuxt
         env:
           MICROCMS_SERVICE_DOMAIN: ${{ secrets.MICROCMS_SERVICE_DOMAIN }}
