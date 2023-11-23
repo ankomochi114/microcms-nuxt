@@ -72,6 +72,8 @@ jobs:
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
       - name: test
         run: ls node_modules/vuetify/lib/components/VCode
+      - name: pwd
+        run: pwd
       - name: Static HTML export with Nuxt
         run: ${{ steps.detect-package-manager.outputs.manager }} run generate
       - name: Upload artifact
