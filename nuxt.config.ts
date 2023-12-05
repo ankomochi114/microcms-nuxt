@@ -12,10 +12,6 @@ export default defineNuxtConfig({
       noExternal: [/\.css$/, /^vuetify/],
     },
   },
-  app: {
-    baseURL: SITE_URL,
-    cdnURL: `https://isystk.github.io${SITE_URL}`,
-  },
   typescript: {
     strict: true,
     typeCheck: true,
