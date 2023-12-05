@@ -16,14 +16,11 @@ export default defineNuxtConfig({
     strict: true,
     typeCheck: true,
   },
-  runtimeConfig: {
-    MICROCMS_SERVICE_DOMAIN: process.env.MICROCMS_SERVICE_DOMAIN,
-    MICROCMS_API_KEY: process.env.MICROCMS_API_KEY,
-  },
   css: ["vuetify/styles", "@mdi/font/css/materialdesignicons.css"],
   modules: ["nuxt-microcms-module"],
   microCMS: {
     serviceDomain: process.env.MICROCMS_SERVICE_DOMAIN,
     apiKey: process.env.MICROCMS_API_KEY,
+    target: "all",
   },
 });
