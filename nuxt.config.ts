@@ -21,6 +21,5 @@ export default defineNuxtConfig({
   microCMS: {
     serviceDomain: process.env.MICROCMS_SERVICE_DOMAIN,
     apiKey: process.env.MICROCMS_API_KEY,
-    target: "all",
   },
 });
